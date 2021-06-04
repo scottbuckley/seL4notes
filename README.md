@@ -1,6 +1,7 @@
 # Setting up Isabelle (flattened)
 Since I find the existing confluence instructions a little confusing, I decided to write a flattened version of those instructions, mostly for my own notes.
 
+> As these instructions are distilled from a number of existing guides, I add reference notes in quote blocks like this one.
 > The top-level instructions are taken from https://confluence.csiro.au/display/RGPSST/Setting+up+Isabelle
 
 ## Getting the code
@@ -22,7 +23,7 @@ We also want this to be added to `PATH` for all future terminal sessions, so add
 Run the following to install repo.
 ```
 sudo apt install curl
-curl [https://storage.googleapis.com/git-repo-downloads/repo](https://storage.googleapis.com/git-repo-downloads/repo) > ~/.local/bin/repo  
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.local/bin/repo  
 chmod a+rx ~/.local/bin/repo  
 repo
 ```
@@ -40,11 +41,11 @@ repo sync
 ```
 The `repo init` command should ask you some questions about your identity and colours. `repo sync` will download about 3.5GB of data, so might take a while.
 
-> At this point we are finished with the instructions at https://bitbucket.ts.data61.csiro.au/projects/SEL4/repos/verification-manifest-internal / https://github.com/seL4/verification-manifest.
+> At this point we are finished with the instructions at https://bitbucket.ts.data61.csiro.au/projects/SEL4/repos/verification-manifest-internal and https://github.com/seL4/verification-manifest.
 
 ## Building Isabelle
 > We are now directed toward https://bitbucket.ts.data61.csiro.au/projects/SEL4/repos/l4v/browse#isabelle-setup, which has its public equivalent at https://github.com/seL4/l4v.
-> The first thing these pages to is direct you to https://github.com/seL4/l4v/blob/master/docs/setup.md / https://github.com/seL4/l4v/blob/master/docs/setup.md to set up dependencies.
+> The first thing these pages do is direct you to https://github.com/seL4/l4v/blob/master/docs/setup.md / https://github.com/seL4/l4v/blob/master/docs/setup.md to set up dependencies.
 
 ### Dependencies
 We now need to set up dependencies. Afaik not all of these are needed to run Isabelle proofs, but at least some are. If you are on Debian, run the following.
@@ -83,7 +84,7 @@ cp -i misc/etc/settings ~/.isabelle/etc/settings
 ./isabelle/bin/isabelle jedit -bf
 ./isabelle/bin/isabelle build -bv HOL-Word
 ```
-Explanation of the above commands (taken directly from the other instructions) are that these commands will perform the following steps:
+These commands will perform the following steps:
 
 -   create an Isabelle user settings directory.
 -   install L4.verified Isabelle settings. These settings initialise the Isabelle installation to use the standard Isabelle  `contrib`  tools from the Munich Isabelle repository and set up paths such that multiple Isabelle repository installations can be used side by side without interfering with each other.
@@ -92,7 +93,7 @@ Explanation of the above commands (taken directly from the other instructions) a
 -   build basic Isabelle images, including  `HOL-Word`  to ensure that the installation works. This may take a few minutes.
 
 > At this point we are finished with the instructions at https://github.com/seL4/l4v/blob/master/docs/setup.md.
-> The rest of this document is taken directly from https://github.com/seL4/l4v.
+> The rest of this document (until Scott's notes) is taken directly from https://github.com/seL4/l4v.
 
 
 ## jEdit macros
