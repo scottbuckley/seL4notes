@@ -167,7 +167,9 @@ L4V_ARCH=ARM ~/repos/verification/isabelle/bin/isabelle jedit -d ~/repos/verific
 
 ### jEdit colours
 
-I prefer a dark theme for most things, but jEdit+Isabelle doesn't allow this option. I've developed some colours I'm happy with, which you can set up if you like. There's no easy import/export for these colours, so you'll need to edit two config files manually. Make these edits while jEdit isn't running, because some settings are saved on close, which will overwrite any changes you made. You'll need to restart Isabelle/jEdit for the changes to take effect anyway.
+![Image of Yaktocat](Isabelle_colours_screenshot.png)
+
+I prefer a dark theme for most things, but jEdit+Isabelle doesn't allow this option. I've found some colours I'm happy with, which you can set up if you like. There's no easy import/export for these colours, so you'll need to edit two config files manually. Make these edits while jEdit isn't running, because some settings are saved on close, which will overwrite any changes you made. You'll need to restart Isabelle/jEdit for the changes to take effect anyway.
 
 General jEdit settings are found in the `~/.isabelle/jedit/properties` file. Below are the lines that I add to set up my colours (there might be some unnecessary stuff in here, I'm still working on paring this down).
 ```
